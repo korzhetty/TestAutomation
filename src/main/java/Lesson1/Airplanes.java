@@ -2,9 +2,9 @@ package Lesson1;
 
 public class Airplanes {
     int airplanesCapacity;
-    int maxAirplanesSpeed;
+    int airplanesMaxAirplanesSpeed;
     int airplainesWingspan;
-    int numberOfEngines;
+    int airplanesNumberOfEngines;
     int airplainsWeight;
 
     void downTheWheels(){
