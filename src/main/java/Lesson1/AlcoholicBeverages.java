@@ -1,19 +1,44 @@
 package Lesson1;
 
 public class AlcoholicBeverages {
-    int alcoholicBeveragesVolumeOfAlcohol;
-    int alcoholicBeveragesCalorie;
-    int alcoholicBeveragesProofSpirit;
-    int alcoholicBeveragesPricePerBottle;
-    int alcoholicBeveragesBottleVolume;
+    private int volumeOfAlcohol;
+    private int calorie;
+    private int temperature;
 
-    void toSpillOut(){
+    public int getVolumeOfAlcohol() {
+        return volumeOfAlcohol;
     }
 
-    void toPour(){
+    public void setVolumeOfAlcohol(int volumeOfAlcohol) {
+        this.volumeOfAlcohol = volumeOfAlcohol;
     }
 
-    void toBlend(){
+    public int getCalorie() {
+        return calorie;
+    }
+
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
+    }
+
+    public int getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
+    }
+
+    public void addVodka(){
+        setVolumeOfAlcohol(getVolumeOfAlcohol() + 7);
+    }
+
+    public void addCoke(){
+        setCalorie(getCalorie() + 100);
+    }
+
+    private void putIntoTheFridge(){
+        setTemperature(getTemperature() -10);
     }
 
 }

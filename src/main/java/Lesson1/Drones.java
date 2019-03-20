@@ -2,19 +2,44 @@ package Lesson1;
 
 public class Drones {
 
-    int dronesMaxSpeed;
-    int dronesMaxHeight;
-    int dronesVideoRecordingResolution;
-    int dronesMaxFlightTime;
-    int dronesWeight;
+    private int dronesSpeed;
+    private int dronesHeight;
+    private boolean VideoCamera;
 
-    void startVideoRecording(){
+    public int getDronesSpeed() {
+        return dronesSpeed;
     }
 
-    void toFall(){
+    public void setDronesSpeed(int dronesSpeed) {
+        this.dronesSpeed = dronesSpeed;
     }
 
-    void toTakeOff(){
+    public int getDronesHeight() {
+        return dronesHeight;
+    }
+
+    public void setDronesHeight(int dronesHeight) {
+        this.dronesHeight = dronesHeight;
+    }
+
+    public boolean isVideoCamera() {
+        return VideoCamera;
+    }
+
+    public void setVideoCamera(boolean videoCamera) {
+        VideoCamera = videoCamera;
+    }
+
+    public void startVideoRecording(){
+        setVideoCamera(true);
+    }
+
+    private void toFall() {
+        setDronesHeight(0);
+    }
+
+    public void startFlying(){
+        setDronesSpeed(getDronesSpeed() + 100);
     }
 
 }

@@ -1,19 +1,47 @@
 package Lesson1;
 
 public class FluorescentLights {
-    int fluorescentLightsCapacity;
-    int fluorescentLightsLenght;
-    int fluorescentLightsLightFlowSize;
-    int fluorescentLightsCapSize;
-    int fluorescentLightsWeight;
+    private int numberOfLamps;
+    private boolean Working;
+    private int Brightness;
 
-    void burnOut(){
+    public int getNumberOfLamps() {
+        return numberOfLamps;
     }
 
-    void toCrack(){
+    public void setNumberOfLamps(int numberOfLamps) {
+        this.numberOfLamps = numberOfLamps;
     }
 
-    void turnOff(){
+    public int getBrightness() {
+        return Brightness;
     }
 
+    public void setBrightness(int brightness) {
+        Brightness = brightness;
+    }
+
+    public boolean isWorking() {
+        return Working;
+    }
+
+    public void setWorking(boolean working) {
+        Working = working;
+    }
+
+    public void burnOut() {
+        setWorking(false);
+    }
+
+    public void toCrack(){
+        setWorking(false);
+    }
+
+    private void turnOff(){
+        setBrightness(0);
+    }
+
+    private void removeTheLamp(){
+        setNumberOfLamps(getNumberOfLamps() - 1);
+    }
 }

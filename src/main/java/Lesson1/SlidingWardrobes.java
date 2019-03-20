@@ -1,19 +1,30 @@
 package Lesson1;
 
 public class SlidingWardrobes {
-    int slidingWardrobesWight;
-    int slidingWardrobesHeight;
-    int slidingWardrobesDepth;
-    int slidingWardrobesNumberOfDoors;
-    int slidingWardrobesNumberOfShelves;
+    private int numberOfShelves;
+    private boolean backLights;
 
-    void openTheDoor(){
+    public int getNumberOfShelves() {
+        return numberOfShelves;
     }
 
-    void pullTheBox(){
+    public void setNumberOfShelves(int numberOfShelves) {
+        this.numberOfShelves = numberOfShelves;
     }
 
-    void turnOnTheBacklight(){
+    public boolean isBackLights() {
+        return backLights;
+    }
+
+    public void setBackLights(boolean backLights) {
+        this.backLights = backLights;
+    }
+
+    public void turnTheBackLights(){
+        setBackLights(true);
+ }
+    private void breakTheShelf(){
+        setNumberOfShelves(getNumberOfShelves() -1);
     }
 
 }

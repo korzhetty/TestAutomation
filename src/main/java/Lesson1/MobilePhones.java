@@ -1,19 +1,47 @@
 package Lesson1;
 
 public class MobilePhones {
-    int mobilePhonesDisplaySize;
-    int mobilePhonesCpuFrequency;
-    int mobilePhonesNumberOfCores;
-    int mobilePhonesRamSize;
-    boolean isSmartphone;
+    private int batteryCharge;
+    private boolean mobileCamera;
+    private boolean wifiConnection;
 
-    void takePhoto(){
+    public int getBatteryCharge() {
+        return batteryCharge;
     }
 
-    void goOnline(){
+    public void setBatteryCharge(int batteryCharge) {
+        this.batteryCharge = batteryCharge;
     }
 
-    void makeCall(){
+    public boolean isMobileCamera() {
+        return mobileCamera;
+    }
+
+    public void setMobileCamera(boolean mobileCamera) {
+        this.mobileCamera = mobileCamera;
+    }
+
+    public boolean isWifiConnection() {
+        return wifiConnection;
+    }
+
+    public void setWifiConnection(boolean wifiConnection) {
+        this.wifiConnection = wifiConnection;
+    }
+
+    public void goOnline(){
+        setWifiConnection(true);
+    }
+
+    public void takePhoto(){
+        setMobileCamera(true);
+    }
+
+    public void startCharging(){
+        setBatteryCharge(getBatteryCharge() + 100);
     }
 
 }
+
+
+
